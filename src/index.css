@@ -1,68 +1,109 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    font-family: "Roboto", sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100w;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #021615;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.Quiz-Container{
+    width: 600px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-a:hover {
-  color: #535bf2;
+h1{
+    color: rgb(2, 87, 102);
 }
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.Score-section{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.Score-section p{
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(4, 105, 72);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.Score-section button{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color:tomato;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.Score-section button:hover{
+    filter: brightness(1.2);
+}
+
+.Question-Section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+.Question-Section h2{
+    color: cornflowerblue;
+    padding: 10px;
+}
+
+.Question-Section p{
+    padding: 30px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.btn-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+.btn-box button{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+background-color: deepskyblue;
+color: #fff;
+
+}
+.btn-box button:hover{
+  filter: brightness(1.2);
+}
+.timer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+span{
+    font-size: 25px;
+    font-weight: 800;
+    font-style: italic;
+    padding: 10px;
 }

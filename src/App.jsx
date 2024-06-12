@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import data from "./index";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  // why use state variable zero for que , becoz of its stored in array formate
+  const [currentQuestion,setCurrentQuestion]=useState(0);
+  // create score variable
+  const[score,setScore]=useState(0)
+  return (<>
+    <div className="Quiz-Container">
+      <h1>Quiz_App</h1>
+      <div className="Score-section"  style={{display : "none"}}  >
+        <p>Your Score : 3/3</p>
+        <button>Restart</button>
+      </div>
+      <div className="Question-Section">
+          <h2>Question : 1</h2>
+          <p>This is a sample question</p>
+          <div className="btn-box">
+            <button>option-1</button>
+            <button>option-2</button>
+            <button>option-3</button>
+            <button>option-4</button>
+          </div>
+        <div className="timer">
+          <h3>Time Left : <span>5s</span></h3>
+        </div>
+      </div>
+    </div>
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  </>);
 }
 
 export default App
+  ;
