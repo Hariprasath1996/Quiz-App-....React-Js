@@ -18,7 +18,7 @@ const App = () => {
     if (selectedOption === data[currentQuestion].correctOPtions) {
       setScore((score) => score + 1)
     }
-    //  in this below if conditions says what ?? , over all data length is given (3)..if current 
+    //  in this below if conditions says what ?? , over all data length is given (3).. 
     // if data length  is higher than the  currentQuestion length na , 
     // setCurrentQuestion length will be increased in current value 0 means 0+1 , 1 means 1+1 
     // 2 means 2+1 , when its entered 3 its automatically stop bcoz of data length is 3 
@@ -38,7 +38,6 @@ const restartQuiz=()=>{
   setShowScore(false);
   setTimer(10) 
 }
-
 // create use Effect for timer method
 useEffect(()=>{
   let interval;
